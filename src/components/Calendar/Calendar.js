@@ -46,7 +46,7 @@ const Calendar = (props) => {
   const selectDateHandler = (e) => {
     //must pass month and date information here.
     console.log(e.target.value);
-    props.dateSelect(e.target.value);
+    props.dateSelect(e.target.value, monthState);
   }
 
   return (

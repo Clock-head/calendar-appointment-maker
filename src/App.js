@@ -9,17 +9,18 @@ function App() {
 
   const [ dateChosen, setDateChosen ] = useState(false);
   const [ selectedDate, setSelectedDate ] = useState(0);
-  const dateSelectHandler = (date) => {
+  const [ selectedMonth, setSelectedMonth ] = useState(0);
+  
+  const dateSelectHandler = (date, month) => {
     setSelectedDate(date);
+    setSelectedMonth(month);
     setDateChosen(true);
-    console.log(date)
-    console.log(selectedDate);
   }
 
   return (
     <div className={classes.App}>
       <Calendar dateSelect={dateSelectHandler}/>
-      {dateChosen && <Appointments selectedDate={selectedDate} />}
+      {dateChosen && <Appointments date={selectedDate} month={selectedMonth} />}
     </div>
   );
 }

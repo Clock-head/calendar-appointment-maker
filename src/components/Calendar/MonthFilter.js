@@ -8,15 +8,13 @@ const MonthFilter = props => {
   const dropdownChangeHandler = (event) => {
     //console.log(event.target.value)
     props.onChangeFilter(event.target.value);
-    
-
   }
 
   return (
     <div className={classes['month-filter']}>
         <div className={classes['month-filter__control']}>
           <label>{months[props.selected]}</label>
-        <select value={props.selected} onChange={dropdownChangeHandler}>
+          <select value={props.selected} onChange={dropdownChangeHandler}>
 					<option value='0'>January</option>
 					<option value='1'>February</option>
 					<option value='2'>March</option>

@@ -1,4 +1,4 @@
-import React, { useState } from 'react';
+//import React, { useState } from 'react';
 import AppointmentList from './AppointmentList';
 import classes from './Appointments.module.css';
 import Card from '../UI/Card';
@@ -23,8 +23,16 @@ const appointments = [
 
 const Appointments = props => {
 
-  const filteredAppointments = appointments.filter(appointment => 
-     appointment.date.getDate() === parseInt(props.selectedDate));
+  const filteredAppointments = appointments.filter( ( appointment ) => {
+
+      if ( appointment.date.getDate() === parseInt(props.date) && appointment.date.getMonth() === parseInt(props.month) ) {
+        return true;
+      }
+
+      return false;
+  });
+
+  
 
   return (
     <Card className={classes.appointments}>

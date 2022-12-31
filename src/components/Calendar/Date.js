@@ -12,7 +12,7 @@ const Date = (props) => {
   return (
     <Col>
       <div className={classes['calendar-date']}> 
-          <button className={classes['calendar-date__day']} value={props.date} onClick={props.onSelectDate}> 
+          <button className={classes['calendar-date__day']} value={props.date + 1} onClick={props.onSelectDate}> 
             {props.date + 1} 
           </button> 
           </div> 
