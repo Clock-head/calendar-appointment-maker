@@ -9,9 +9,14 @@
   border-radius: 12px;
   align-items: center;
   justify-content: center;
+  margin: 4px 4px 4px 4px;
 }
 
 .calendar-date__day {
   font-size: 1.5rem;
   font-weight: bold;
+  border-radius: 12px;
+  width: 4.3rem;
+  height: 4.3rem;
 }
+

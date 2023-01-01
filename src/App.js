@@ -17,10 +17,14 @@ function App() {
     setDateChosen(true);
   }
 
+  const resetFunc = () => {
+    setDateChosen(false);
+  }
+
   return (
     <div className={classes.App}>
-      <Calendar dateSelect={dateSelectHandler}/>
-      {dateChosen && <Appointments date={selectedDate} month={selectedMonth} />}
+      <Calendar dateSelect={dateSelectHandler} displayReset={resetFunc}/>
+      { dateChosen && <Appointments date={selectedDate} month={selectedMonth} />}
     </div>
   );
 }

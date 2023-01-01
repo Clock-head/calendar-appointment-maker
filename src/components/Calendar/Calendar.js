@@ -38,9 +38,12 @@ const Calendar = (props) => {
     //console.log(monthState);
   }, [monthState]);
 
+
+
   const onChooseMonth = (month) => {
     //console.log(days);
     setMonthState(month)
+    props.displayReset();
   }
 
   const selectDateHandler = (e) => {
@@ -56,7 +59,7 @@ const Calendar = (props) => {
       onChangeFilter={onChooseMonth}>
       </MonthFilter>
         <Container>
-          <Row>
+          <Row md={6}>
              { daysState.map((day) => { return <Date key={day} date={day} onSelectDate={selectDateHandler}/>}) }
           </Row>
         </Container>

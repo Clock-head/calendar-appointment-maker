@@ -1,5 +1,6 @@
 import React from 'react';
 import classes from './MonthFilter.module.css';
+import Card from '../UI/Card';
 
 const MonthFilter = props => {
 
@@ -11,9 +12,10 @@ const MonthFilter = props => {
   }
 
   return (
+    <Card className={classes['card']}>
     <div className={classes['month-filter']}>
         <div className={classes['month-filter__control']}>
-          <label>{months[props.selected]}</label>
+          {/* <label>{months[props.selected]}</label> */}
           <select value={props.selected} onChange={dropdownChangeHandler}>
 					<option value='0'>January</option>
 					<option value='1'>February</option>
@@ -30,6 +32,7 @@ const MonthFilter = props => {
         </select>
         </div>
     </div>
+    </Card>
   )
 
 }
