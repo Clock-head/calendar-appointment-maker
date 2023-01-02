@@ -3,27 +3,13 @@ import AppointmentList from './AppointmentList';
 import classes from './Appointments.module.css';
 import Card from '../UI/Card';
 
-const appointments = [
-  {
-    name: "Andrew",
-    time: "1600",
-    date: new Date('2022, 3, 4')
-  },
-  {
-    name: "Wahyu",
-    time: "1300",
-    date: new Date('2022, 3, 5')
-  },
-  {
-    name: "Ellie",
-    time: "1400",
-    date: new Date('2022, 3, 7')
-  }
-]
+
+
+
 
 const Appointments = props => {
 
-  const filteredAppointments = appointments.filter( ( appointment ) => {
+  const filteredAppointments = props.appointments.filter( ( appointment ) => {
       if ( appointment.date.getDate() === parseInt(props.date) && appointment.date.getMonth() === parseInt(props.month) ) {
         return true;
       }

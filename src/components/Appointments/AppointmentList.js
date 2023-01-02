@@ -12,7 +12,8 @@ const AppointmentList = props => {
   if (props.items.length > 0) {
     return ( props.items.map( (appointment) => ( 
         <AppointmentItem 
-        name={ appointment.name } 
+        firstName={ appointment.firstName } 
+        lastName={appointment.lastName}
         time={appointment.time}
         date={appointment.date}
         /> 

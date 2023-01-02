@@ -9,7 +9,7 @@ const AppointmentItem = props => {
     <Card className={classes['appointment-item']}>
       <AppointmentDate date={props.date} />
     <div className={classes['appointment-item']}>
-      <h2>{props.name}</h2>
+      <h2>{props.firstName} {props.lastName} </h2>
     </div>
     </Card>
   )
